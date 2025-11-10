@@ -45,7 +45,6 @@ with Configurator() as config:
 from wsgiref.simple_server import make_server
 
 if __name__ == '__main__':
-    # ... (kode configurator) ...
     server = make_server('0.0.0.0', 6543, app)
     server.serve_forever()
 ```
