@@ -53,15 +53,18 @@ if __name__ == '__main__':
 3. server.serve_forever() memulai server untuk terus berjalan dan mendengarkan permintaan.
 
 ## Alur Kerja (Request Lifecycle)
+
+Analisis alur kerja dari kode di atas adalah sebagai berikut:
+
 ---
-1. Analisis alur kerja dari kode di atas adalah sebagai berikut:
-2. Pengguna membuka http://localhost:6543/ di browser.
-3. Server (wsgiref) menerima permintaan untuk URL /.
-4. Server meneruskan permintaan ke aplikasi WSGI Pyramid (app).
-5. Pyramid (via Configurator) memeriksa tabel rutenya.
-6. URL / cocok dengan rute yang dinamai hello.
-7. Pyramid memeriksa view mana yang terhubung ke rute hello.
-8. Pyramid menemukan bahwa view hello_world terhubung ke rute tersebut.
-9.Pyramid menjalankan fungsi hello_world(request).
-10. Fungsi mengembalikan objek Response('Hello World!').
-11. Pyramid mengirimkan respons tersebut kembali ke browser.
+Analisis alur kerja dari kode di atas adalah sebagai berikut:
+1. Pengguna membuka http://localhost:6543/ di browser.
+2. Server (wsgiref) menerima permintaan untuk URL /.
+3. Server meneruskan permintaan ke aplikasi WSGI Pyramid (app).
+4. Pyramid (via Configurator) memeriksa tabel rutenya.
+5. URL / cocok dengan rute yang dinamai hello.
+6. Pyramid memeriksa view mana yang terhubung ke rute hello.
+7. Pyramid menemukan bahwa view hello_world terhubung ke rute tersebut.
+8.Pyramid menjalankan fungsi hello_world(request).
+9. Fungsi mengembalikan objek Response('Hello World!').
+10. Pyramid mengirimkan respons tersebut kembali ke browser.
