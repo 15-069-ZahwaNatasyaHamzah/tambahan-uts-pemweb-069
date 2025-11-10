@@ -6,7 +6,7 @@ Tujuan dari tutorial "Hello World" ini adalah untuk mendemonstrasikan konsep int
 
 ---
 
-## 1. Komponen Utama Kode
+## Komponen Utama Kode
 
 Kode *Hello World* ini memperkenalkan **3 pilar utama Pyramid**:
 
@@ -53,6 +53,7 @@ if __name__ == '__main__':
 3. server.serve_forever() memulai server untuk terus berjalan dan mendengarkan permintaan.
 
 ## Alur Kerja (Request Lifecycle)
+---
 1. Analisis alur kerja dari kode di atas adalah sebagai berikut:
 2. Pengguna membuka http://localhost:6543/ di browser.
 3. Server (wsgiref) menerima permintaan untuk URL /.
