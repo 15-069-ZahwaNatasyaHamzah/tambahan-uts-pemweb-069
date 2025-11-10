@@ -24,7 +24,7 @@ def hello_world(request):
 2. Ia wajib menerima parameter request, yang berisi semua informasi tentang permintaan HTTP yang masuk dari browser.
 3. Ia wajib mengembalikan sebuah objek Response. Di sini, pyramid.response.Response digunakan untuk mengirim respons HTTP paling sederhana: teks "Hello World!" dengan status "200 OK".
 
-### A. Configurator (Konfigurasi dan Peta Rute)
+### B. Configurator (Konfigurasi dan Peta Rute)
 
 ```Python
 from pyramid.config import Configurator
@@ -34,3 +34,21 @@ with Configurator() as config:
     config.add_view(hello_world, route_name='hello')
     app = config.make_wsgi_app()
 ```
+1. Configurator() adalah objek utama tempat semua pengaturan aplikasi didaftarkan.
+2. config.add_route('hello', '/'): Ini adalah pendaftaran rute. Kita memberi tahu Pyramid: "Jika ada permintaan masuk ke URL root (/), berikan nama internal 'hello' pada rute ini."
+3. config.add_view(hello_world, route_name='hello'): Ini adalah penghubung (mapper). Kita memberi tahu Pyramid: "Jika rute bernama 'hello' cocok, jalankan fungsi hello_world."
+4. config.make_wsgi_app(): Ini adalah langkah terakhir konfigurasi. Pyramid mengambil semua rute dan view yang telah didaftarkan dan merakitnya menjadi satu aplikasi WSGI yang standar.
+
+### C. Server (Eksekutor Aplikasi)
+
+```Python
+from wsgiref.simple_server import make_server
+# ...
+if __name__ == '__main__':
+    # ... (kode configurator) ...
+    server = make_server('0.0.0.0', 6543, app)
+    server.serve_forever()
+```
+1. wsgiref.simple_server adalah server web bawaan Python. Ini hanya untuk pengembangan (development), bukan untuk produksi (production).
+2. make_server(...) menginstruksikan server untuk berjalan di semua alamat IP (0.0.0.0) pada port 6543, dan memberinya aplikasi app (yang kita buat di langkah B) untuk dijalankan.
+3. server.serve_forever() memulai server untuk terus berjalan dan mendengarkan permintaan.
