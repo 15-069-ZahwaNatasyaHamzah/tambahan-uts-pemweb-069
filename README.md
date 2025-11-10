@@ -28,7 +28,7 @@ def hello_world(request):
 
 ```Python
 from pyramid.config import Configurator
-# ...
+
 with Configurator() as config:
     config.add_route('hello', '/')
     config.add_view(hello_world, route_name='hello')
@@ -43,7 +43,7 @@ with Configurator() as config:
 
 ```Python
 from wsgiref.simple_server import make_server
-# ...
+
 if __name__ == '__main__':
     # ... (kode configurator) ...
     server = make_server('0.0.0.0', 6543, app)
@@ -52,3 +52,16 @@ if __name__ == '__main__':
 1. wsgiref.simple_server adalah server web bawaan Python. Ini hanya untuk pengembangan (development), bukan untuk produksi (production).
 2. make_server(...) menginstruksikan server untuk berjalan di semua alamat IP (0.0.0.0) pada port 6543, dan memberinya aplikasi app (yang kita buat di langkah B) untuk dijalankan.
 3. server.serve_forever() memulai server untuk terus berjalan dan mendengarkan permintaan.
+
+## Alur Kerja (Request Lifecycle)
+1. Analisis alur kerja dari kode di atas adalah sebagai berikut:
+2. Pengguna membuka http://localhost:6543/ di browser.
+3. Server (wsgiref) menerima permintaan untuk URL /.
+4. Server meneruskan permintaan ke aplikasi WSGI Pyramid (app).
+5. Pyramid (via Configurator) memeriksa tabel rutenya.
+6. URL / cocok dengan rute yang dinamai hello.
+7. Pyramid memeriksa view mana yang terhubung ke rute hello.
+8. Pyramid menemukan bahwa view hello_world terhubung ke rute tersebut.
+9.Pyramid menjalankan fungsi hello_world(request).
+10. Fungsi mengembalikan objek Response('Hello World!').
+11. Pyramid mengirimkan respons tersebut kembali ke browser.
