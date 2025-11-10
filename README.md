@@ -16,8 +16,8 @@ Kode *Hello World* ini memperkenalkan **3 pilar utama Pyramid**:
 ### 🧩 A. View Callable (`hello_world`)
 
 ```python
-```
 from pyramid.response import Response
 
 def hello_world(request):
     return Response('Hello World!')
+```
