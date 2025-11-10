@@ -1,4 +1,4 @@
-# 🏗️ Analisis *Pyramid Quick Tutorial - Hello World*
+# Analisis *Pyramid Quick Tutorial - Hello World*
 
 ## Tujuan Tutorial 
 
