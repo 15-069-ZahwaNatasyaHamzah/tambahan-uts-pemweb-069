@@ -1,6 +1,6 @@
 # 🏗️ Analisis *Pyramid Quick Tutorial - Hello World*
 
-## Tujuan Tutoirial 
+## Tujuan Tutorial 
 
 Tujuan dari tutorial "Hello World" ini adalah untuk mendemonstrasikan konsep inti dan komponen minimal yang diperlukan untuk membuat aplikasi web yang berfungsi menggunakan framework Pyramid. Ini menunjukkan bagaimana Pyramid dapat memulai dari satu file Python sederhana tanpa memaksakan struktur direktori yang kompleks.
 
