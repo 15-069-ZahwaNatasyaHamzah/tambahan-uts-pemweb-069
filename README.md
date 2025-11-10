@@ -1,9 +1,8 @@
 # 🏗️ Analisis *Pyramid Quick Tutorial - Hello World*
 
-### Pyramid "Hello World"
+### Tujuan Tutoirial 
 
-Laman ini adalah langkah paling awal untuk memahami *core concept* (konsep inti) dari framework **Pyramid**.  
-Tujuannya adalah untuk menunjukkan cara membuat aplikasi web yang berfungsi dengan **kode seminimal mungkin** dalam satu file.
+Tujuan dari tutorial "Hello World" ini adalah untuk mendemonstrasikan konsep inti dan komponen minimal yang diperlukan untuk membuat aplikasi web yang berfungsi menggunakan framework Pyramid. Ini menunjukkan bagaimana Pyramid dapat memulai dari satu file Python sederhana tanpa memaksakan struktur direktori yang kompleks.
 
 ---
 
