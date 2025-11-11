@@ -78,35 +78,28 @@ def hello_world(request):
 3. with Configurator(settings=settings) as config: Baris ini sangat penting. Kita "menyimpan" dictionary settings ke dalam konfigurasi aplikasi.
 4. request.registry.settings: Setelah disimpan di Configurator, Pyramid membuat pengaturan tersebut tersedia untuk semua view melalui request.registry.settings.
 
-## Alur Kerja (Alur Data Konfigurasi)
+### Alur Kerja (Alur Data Konfigurasi)
 
 Alur kerja ini menjelaskan bagaimana data dari file .ini mengalir ke view.
 
 1. Alur Kerja Startup (Pemuatan Konfigurasi)
-   a. Pengguna menjalankan pserve development.ini.
+   
+   1. Pengguna menjalankan pserve development.ini.
    2. pserve membaca development.ini.
-   3. Ia melihat [app:main] dan membuat dictionary settings, contoh:
-      {'use':'egg:tutorial', 'pyramid.reload_templates': 'true',
-      'tutorial.debug':    'true'}.
+   3. Ia melihat [app:main] dan membuat dictionary settings, contoh: {'use':'egg:tutorial', 'pyramid.reload_templates': 'true','tutorial.debug':'true'}.
    4. pserve memanggil entry point main dari tutorial (sesuai setup.py).
-   5. pserve menyuntikkan dictionary ini sebagai argumen **settings ke             fungsi def main(...).
-   6. Di dalam main, dictionary settings ini diteruskan ke
-      Configurator(settings=settings).
-   7. Configurator mengambil settings tersebut dan menyimpannya di lokasi
-      sentral aplikasi yang disebut Registry.
-   8. Aplikasi WSGI (app) yang sudah jadi, yang kini "sadar" akan
-      konfigurasinya, diserahkan ke server waitress.
+   5. pserve menyuntikkan dictionary ini sebagai argumen **settings ke fungsi def main(...).
+   6. Di dalam main, dictionary settings ini diteruskan keConfigurator(settings=settings).
+   7. Configurator mengambil settings tersebut dan menyimpannya di lokasi sentral aplikasi yang disebut Registry.
+   8. Aplikasi WSGI (app) yang sudah jadi, yang kini "sadar" akan konfigurasinya, diserahkan ke server waitress.
 
 2. Alur Kerja Request (Penggunaan Konfigurasi)
+   
    1. Pengguna membuka http://localhost:6543/.
    2. waitress menerima permintaan dan memberikannya ke aplikasi Pyramid.
    3. Pyramid mencocokkan rute / ke view hello_world.
-   4. Pyramid membuat objek request untuk permintaan ini. Objek request ini
-      memiliki akses ke Registry aplikasi.
+   4. Pyramid membuat objek request untuk permintaan ini. Objek request ini memiliki akses ke Registry aplikasi.
    5. Pyramid memanggil hello_world(request).
-   6. Di dalam view, request.registry.settings dieksekusi untuk mengambil
-      dictionary settings dari Registry.
-   7. Kode settings.get('tutorial.debug', False) digunakan untuk memeriksa
-      nilai konfigurasi.
-   8. Karena tutorial.debug adalah true di file .ini, view mengembalikan
-      Response('Hello World! (Debug Mode IS ON)').
+   6. Di dalam view, request.registry.settings dieksekusi untuk mengambil dictionary settings dari Registry.
+   7. Kode settings.get('tutorial.debug', False) digunakan untuk memeriksa nilai konfigurasi.
+   8. Karena tutorial.debug adalah true di file .ini, view mengembalikan Response('Hello World! (Debug Mode IS ON)').
