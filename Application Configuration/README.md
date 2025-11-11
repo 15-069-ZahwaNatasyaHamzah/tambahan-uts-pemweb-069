@@ -36,9 +36,9 @@ port = 6543
 1. [app:main]: Bagian ini berisi pengaturan yang akan diteruskan ke aplikasi Pyramid kita.
 2. tutorial.debug = true: Ini adalah pengaturan kustom yang kita ciptakan. pserve akan membaca baris ini dan menambahkannya ke dictionary pengaturan.
 
-3. ### B. tutorial/__init__.py (Pabrik Aplikasi & View)
+### B. tutorial/__init__.py (Pabrik Aplikasi & View)
 
-4. File Python ini dimodifikasi untuk menerima dan menggunakan pengaturan baru.
+File Python ini dimodifikasi untuk menerima dan menggunakan pengaturan baru.
 
 ```python
    from pyramid.config import Configurator
@@ -96,3 +96,17 @@ Alur kerja ini menjelaskan bagaimana data dari file .ini mengalir ke view.
       sentral aplikasi yang disebut Registry.
    8. Aplikasi WSGI (app) yang sudah jadi, yang kini "sadar" akan
       konfigurasinya, diserahkan ke server waitress.
+
+2. Alur Kerja Request (Penggunaan Konfigurasi)
+   1. Pengguna membuka http://localhost:6543/.
+   2. waitress menerima permintaan dan memberikannya ke aplikasi Pyramid.
+   3. Pyramid mencocokkan rute / ke view hello_world.
+   4. Pyramid membuat objek request untuk permintaan ini. Objek request ini
+      memiliki akses ke Registry aplikasi.
+   5. Pyramid memanggil hello_world(request).
+   6. Di dalam view, request.registry.settings dieksekusi untuk mengambil
+      dictionary settings dari Registry.
+   7. Kode settings.get('tutorial.debug', False) digunakan untuk memeriksa
+      nilai konfigurasi.
+   8. Karena tutorial.debug adalah true di file .ini, view mengembalikan
+      Response('Hello World! (Debug Mode IS ON)').
