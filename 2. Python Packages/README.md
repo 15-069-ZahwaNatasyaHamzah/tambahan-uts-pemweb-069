@@ -96,7 +96,8 @@ Alur kerja sekarang terbagi menjadi dua fase: (1) Instalasi & Eksekusi Server, d
 
 ### 1. Fase Eksekusi Server
 
-Ini adalah langkah-langkah untuk menjalankan server.
+Ini adalah langkah-langkah untuk menjalankan server :
+
 1. Pengguna menjalankan pip install -e . di terminal. Ini menginstal paket tutorial dalam mode "editable" dan mendaftarkan entry point nya ke sistem Python.
 2. Pengguna menjalankan pserve development.ini --reload.
 3. Perintah pserve membaca file development.ini.
@@ -108,7 +109,8 @@ Ini adalah langkah-langkah untuk menjalankan server.
 
 ### 2. Fase Penanganan Request
 
-Ini adalah apa yang terjadi ketika pengguna mengakses web.
+Ini adalah apa yang terjadi ketika pengguna mengakses web :
+
 1. Pengguna membuka http://localhost:6543/ di browser.
 2. Server waitress menerima permintaan untuk URL /.
 3. waitress meneruskan permintaan ke aplikasi WSGI Pyramid (app) yang dibuat oleh fungsi main.
