@@ -1,4 +1,4 @@
-# Analisis Python Packages for Pyramid Applications
+# Analisis Python Packages 
 
 ## Tujuan Tutorial
 
