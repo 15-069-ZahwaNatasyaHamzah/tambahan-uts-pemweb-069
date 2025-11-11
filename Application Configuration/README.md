@@ -83,7 +83,7 @@ def hello_world(request):
 Alur kerja ini menjelaskan bagaimana data dari file .ini mengalir ke view.
 
 1. Alur Kerja Startup (Pemuatan Konfigurasi)
-   1. Pengguna menjalankan pserve development.ini.
+   a. Pengguna menjalankan pserve development.ini.
    2. pserve membaca development.ini.
    3. Ia melihat [app:main] dan membuat dictionary settings, contoh:
       {'use':'egg:tutorial', 'pyramid.reload_templates': 'true',
