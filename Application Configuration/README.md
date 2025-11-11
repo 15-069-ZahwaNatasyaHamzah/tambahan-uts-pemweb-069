@@ -77,3 +77,22 @@ def hello_world(request):
 3. asbool: Menggunakan utilitas asbool adalah praktik terbaik karena nilai di file .ini selalu berupa string ("true", "false"). asbool akan mengonversinya ke Boolean Python (True, False).
 3. with Configurator(settings=settings) as config: Baris ini sangat penting. Kita "menyimpan" dictionary settings ke dalam konfigurasi aplikasi.
 4. request.registry.settings: Setelah disimpan di Configurator, Pyramid membuat pengaturan tersebut tersedia untuk semua view melalui request.registry.settings.
+
+## Alur Kerja (Alur Data Konfigurasi)
+
+Alur kerja ini menjelaskan bagaimana data dari file .ini mengalir ke view.
+
+1. Alur Kerja Startup (Pemuatan Konfigurasi)
+   1. Pengguna menjalankan pserve development.ini.
+   2. pserve membaca development.ini.
+   3. Ia melihat [app:main] dan membuat dictionary settings, contoh:
+      {'use':'egg:tutorial', 'pyramid.reload_templates': 'true',
+      'tutorial.debug':    'true'}.
+   4. pserve memanggil entry point main dari tutorial (sesuai setup.py).
+   5. pserve menyuntikkan dictionary ini sebagai argumen **settings ke             fungsi def main(...).
+   6. Di dalam main, dictionary settings ini diteruskan ke
+      Configurator(settings=settings).
+   7. Configurator mengambil settings tersebut dan menyimpannya di lokasi
+      sentral aplikasi yang disebut Registry.
+   8. Aplikasi WSGI (app) yang sudah jadi, yang kini "sadar" akan
+      konfigurasinya, diserahkan ke server waitress.
