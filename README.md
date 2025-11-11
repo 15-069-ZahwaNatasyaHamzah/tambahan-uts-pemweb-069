@@ -94,7 +94,7 @@ def main(global_config, **settings):
 
 Alur kerja sekarang terbagi menjadi dua fase: (1) Instalasi & Eksekusi Server, dan (2) Penanganan Request.
 
-### Fase Eksekusi Server
+### 1. Fase Eksekusi Server
 
 Ini adalah langkah-langkah untuk menjalankan server.
 1. Pengguna menjalankan pip install -e . di terminal. Ini menginstal paket tutorial dalam mode "editable" dan mendaftarkan entry point nya ke sistem Python.
@@ -106,7 +106,7 @@ Ini adalah langkah-langkah untuk menjalankan server.
 7. Fungsi main berjalan, mengonfigurasi rute (/) dan view (hello_world), lalu mengembalikan aplikasi WSGI (app) yang sudah jadi.
 8. Server waitress kini berjalan di http://0.0.0.0:6543, siap melayani app tersebut.
 
-### Fase Penanganan Request
+### 2. Fase Penanganan Request
 
 Ini adalah apa yang terjadi ketika pengguna mengakses web.
 1. Pengguna membuka http://localhost:6543/ di browser.
