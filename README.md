@@ -3,7 +3,8 @@
 ## Tujuan Tutorial
 
 Tujuan dari tutorial ini adalah untuk mengubah aplikasi web "Hello World" yang sebelumnya berbentuk satu file (.py) menjadi sebuah paket Python (Python package) yang terstruktur dan dapat diinstal.
-Ini adalah langkah fundamental untuk membangun aplikasi yang lebih besar dan lebih terorganisir. Tutorial ini memperkenalkan konsep-konsep kunci untuk skalabilitas:
+
+Ini adalah langkah fundamental untuk membangun aplikasi yang lebih besar dan lebih terorganisir. Tutorial ini memperkenalkan konsep-konsep kunci untuk skalabilitas :
 1. Struktur Proyek: Mengubah satu file menjadi struktur direktori paket (tutorial/__init__.py).
 2. Manajemen Dependensi: Menggunakan setup.py untuk mendefinisikan apa saja yang dibutuhkan oleh aplikasi (misalnya, pyramid, waitress).
 3. Konfigurasi Eksternal: Menggunakan file .ini (development.ini) untuk mengelola pengaturan server dan aplikasi, alih-alih melakukan hardcoding di dalam file Python.
@@ -14,7 +15,8 @@ Ini adalah langkah fundamental untuk membangun aplikasi yang lebih besar dan leb
 
 ## Komponen Utama Kode
 
-Tutorial ini merombak struktur file tunggal menjadi paket yang dapat diinstal. Komponen utamanya adalah tiga file baru yang bekerja bersama:
+Tutorial ini merombak struktur file tunggal menjadi paket yang dapat diinstal. 
+Komponen utamanya adalah tiga file baru yang bekerja bersama :
 
 ---
 
