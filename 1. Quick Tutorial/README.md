@@ -65,4 +65,9 @@ Analisis alur kerja dari kode di atas adalah sebagai berikut:
 7. Pyramid menemukan bahwa view hello_world terhubung ke rute tersebut.
 8.Pyramid menjalankan fungsi hello_world(request).
 9. Fungsi mengembalikan objek Response('Hello World!').
-10. Pyramid mengirimkan respons tersebut kembali ke browser.
+10. Pyramid mengirimkan respons tersebut kembali ke browser.a
+
+## Screenshoot Hasil
+
+![Gambar WhatsApp 2025-11-11 pukul 19 51 26_906edd10](https://github.com/user-attachments/assets/a90a41df-286d-4f41-82ad-116226d49d2f)
+
