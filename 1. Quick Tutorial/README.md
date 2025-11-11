@@ -56,8 +56,6 @@ if __name__ == '__main__':
 
 Analisis alur kerja dari kode di atas adalah sebagai berikut:
 
----
-Analisis alur kerja dari kode di atas adalah sebagai berikut:
 1. Pengguna membuka http://localhost:6543/ di browser.
 2. Server (wsgiref) menerima permintaan untuk URL /.
 3. Server meneruskan permintaan ke aplikasi WSGI Pyramid (app).
