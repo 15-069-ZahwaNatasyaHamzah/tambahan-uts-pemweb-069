@@ -121,3 +121,8 @@ Ini adalah apa yang terjadi ketika pengguna mengakses web :
 8. Pyramid menjalankan fungsi hello_world(request).
 9. Fungsi mengembalikan objek Response('Hello World!').
 10. Pyramid (melalui waitress) mengirimkan respons tersebut kembali ke browser.
+
+
+## Screenshoot Hasil 
+
+![Gambar WhatsApp 2025-11-12 pukul 08 48 28_d74f955d](https://github.com/user-attachments/assets/f95f15fb-44c4-4f09-9de2-6b3d80bc3953)
