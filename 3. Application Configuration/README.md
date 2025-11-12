@@ -100,6 +100,10 @@ Alur kerja ini menjelaskan bagaimana data dari file .ini mengalir ke view.
    - Pyramid mencocokkan rute / ke view hello_world.
    - Pyramid membuat objek request untuk permintaan ini. Objek request ini memiliki akses ke Registry aplikasi.
    - Pyramid memanggil hello_world(request).
+
+## Screenshoot Hasil
+![Gambar WhatsApp 2025-11-12 pukul 09 08 11_34752135](https://github.com/user-attachments/assets/6368dbc3-edc4-4ca8-be01-2bebbc8dcdb5)
+
    - Di dalam view, request.registry.settings dieksekusi untuk mengambil dictionary settings dari Registry.
    - Kode settings.get('tutorial.debug', False) digunakan untuk memeriksa nilai konfigurasi.
    - Karena tutorial.debug adalah true di file .ini, view mengembalikan Response('Hello World! (Debug Mode IS ON)').
