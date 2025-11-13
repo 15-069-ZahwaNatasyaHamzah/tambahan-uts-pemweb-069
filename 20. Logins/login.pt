@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+    <h1>Silakan Login</h1>
+    
+    <p style="color: red;">${message}</p>
+
+    <form action="${url}" method="post">
+        <input type="hidden" name="form.submitted" value="1"/>
+        
+        <label>Username</label><br>
+        <input type="text" name="login" value="${login}"/><br><br>
+        
+        <label>Password</label><br>
+        <input type="password" name="password"/><br><br>
+        
+        <input type="submit" value="Log In"/>
+    </form>
+</body>
+</html>
