@@ -74,3 +74,7 @@ pyramid.includes =
 7. Saat browser meminta halaman (http://localhost:6543/), aplikasi Pyramid merender response "Hello World!".
 8. Sebelum mengirimkannya ke browser, pyramid_debugtoolbar menyuntikkan (inject) HTML, CSS, dan JavaScript-nya sendiri ke dalam response tersebut.
 9. Hasilnya, browser menampilkan "Hello World!" dan juga logo/panel debug toolbar di sisi halaman.
+
+## Screenshoot Hasil
+
+![Gambar WhatsApp 2025-11-13 pukul 08 03 49_918cb2d0](https://github.com/user-attachments/assets/d49fdc80-06e2-4e93-9bb3-883eb3642ecc)
