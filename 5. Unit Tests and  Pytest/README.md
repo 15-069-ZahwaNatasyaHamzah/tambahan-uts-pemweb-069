@@ -96,3 +96,8 @@ def test_hello_view():
 6. pytest menjalankan kedua fungsi tersebut.Di dalam test_default_view, assert info.text == 'Hello World!' dievaluasi.
 7. Di dalam test_hello_view, assert res.body == b'Hello World!' dievalua
 8. Jika semua assert lolos (bernilai True), pytest akan melaporkan "PASSED". Jika ada yang gagal, ia akan melaporkan "FAILED" dengan detail error-nya.
+
+## Screenshoot Hasil
+
+![Gambar WhatsApp 2025-11-13 pukul 07 43 52_571b8806](https://github.com/user-attachments/assets/f769131a-0466-4286-8294-1601ffbaad3d)
+![Gambar WhatsApp 2025-11-13 pukul 08 03 49_32d1d85e](https://github.com/user-attachments/assets/d9068012-7354-4465-a21d-04b205141ff3)
