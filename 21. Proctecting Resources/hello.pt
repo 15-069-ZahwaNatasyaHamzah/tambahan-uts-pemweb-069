@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>TOP SECRET</title></head>
+<body style="background-color: #ffebee; padding: 50px; text-align: center;">
+    <h1 style="color: darkred; font-size: 50px;">TOP SECRET! 🤫</h1>
+    <p>Selamat! Karena kamu login sebagai <b>editor</b>, kamu punya izin masuk ke sini.</p>
+    <p>User biasa (viewer) dilarang masuk.</p>
+    <hr>
+    <a href="/">Kembali ke Home</a>
+</body>
+</html>

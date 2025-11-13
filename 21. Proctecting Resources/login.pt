@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Login</title></head>
+<body>
+    <h1>Silakan Login</h1>
+    <p style="color: red;">${message}</p>
+    <form action="${url}" method="post">
+        <input type="hidden" name="form.submitted" value="1"/>
+        <label>Username</label> <input type="text" name="login" value="${login}"/><br>
+        <label>Password</label> <input type="password" name="password"/><br>
+        <input type="submit" value="Log In"/>
+    </form>
+    <p>Hint: User <b>editor</b> (password: editor) atau <b>viewer</b> (password: viewer)</p>
+</body>
+</html>

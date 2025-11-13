@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Authorization Tutorial</title></head>
+<body>
+    <h1>Halaman Utama</h1>
+    
+    <div tal:condition="logged_in">
+        <p>Halo, <b>${logged_in}</b>!</p>
+        <p>
+            <a href="${request.route_url('hello')}" style="color: red; font-weight: bold;">
+                >> COBA BUKA HALAMAN RAHASIA <<
+            </a>
+        </p>
+        <br>
+        <a href="${request.route_url('logout')}">Logout</a>
+    </div>
+
+    <div tal:condition="not logged_in">
+        <p>Kamu belum login.</p>
+        <a href="${request.route_url('login')}">Login Disini</a>
+    </div>
+</body>
+</html>
