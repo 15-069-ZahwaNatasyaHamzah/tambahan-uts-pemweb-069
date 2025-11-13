@@ -102,3 +102,8 @@ def test_hello_name_view(testapp):
    - Pyramid memanggil hello_view(request), menyertakan matchdict di dalam request.
    - Di dalam view, request.matchdict['name'] mengambil nilai "Bob".
    - View mengembalikan Response('Hello, Bob!').
+
+## Screenshoot Hasil 
+
+![Gambar WhatsApp 2025-11-13 pukul 08 38 57_5c420a69](https://github.com/user-attachments/assets/c254e0d6-58a4-418c-8800-4207f0e0266a)
+![Gambar WhatsApp 2025-11-13 pukul 08 38 10_e12b9d28](https://github.com/user-attachments/assets/a2b4072f-a381-4882-a1f6-588cc1f289f4)
