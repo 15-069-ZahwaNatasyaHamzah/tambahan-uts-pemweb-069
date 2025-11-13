@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>More View Classes</title>
+</head>
+<body>
+    <h1>${page_title}</h1>
+    <p>Ini adalah halaman kedua.</p>
+    <p>
+        <a href="${request.route_url('home')}">&larr; Kembali ke Home</a>
+    </p>
+</body>
+</html>

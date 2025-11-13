@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>More View Classes</title>
+</head>
+<body>
+    <h1>${page_title}</h1>
+    <p>Selamat datang di Halaman Utama.</p>
+    <p>
+        <a href="${request.route_url('hello')}">Pergi ke Halaman Hello &rarr;</a>
+    </p>
+</body>
+</html>
