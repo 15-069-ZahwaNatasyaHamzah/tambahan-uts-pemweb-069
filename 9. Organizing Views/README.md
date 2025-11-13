@@ -70,3 +70,9 @@ Alur kerja startup (pemindaian) hampir sama, tetapi alur kerja request sedikit b
 5. Setelah instance dibuat, Pyramid memanggil method spesifik yang terkait dengan rute tersebut: result_dict = view_instance.hello()
 6. Method hello berjalan, mengakses self.request.matchdict['name'] ("Bob"), dan mengembalikan dictionary {'name': 'Bob'}.
 7. Pyramid melihat renderer yang terdaftar untuk view ini, mengambil dictionary tersebut, merendernya dengan template hello.pt, dan mengirimkan HTML-nya ke browser.
+
+## Screenshoot Hasil
+
+![Gambar WhatsApp 2025-11-13 pukul 08 52 23_9ffd53f7](https://github.com/user-attachments/assets/7213b76f-cc96-4edc-8ab3-45bf0952900e)
+
+![Gambar WhatsApp 2025-11-13 pukul 08 53 17_a149a4d0](https://github.com/user-attachments/assets/df24aac8-5ab3-4b0c-aa4b-e14c20d0e9d7)
