@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AJAX Tutorial</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        #result { 
+            margin-top: 20px; 
+            padding: 10px; 
+            border: 2px dashed green; 
+            display: none; /* Sembunyikan dulu */
+            background-color: #e8f5e9;
+        }
+        button { padding: 10px 20px; cursor: pointer; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>AJAX Development</h1>
+    <p>Klik tombol di bawah untuk mengambil data dari server tanpa Refresh halaman.</p>
+    
+    <button id="btn-load">Ambil Data JSON</button>
+    
+    <div id="result">
+        </div>
+
+    <script>
+        document.getElementById('btn-load').addEventListener('click', function() {
+            // 1. Panggil URL '/howdy.json'
+            fetch('/howdy.json')
+                .then(response => response.json()) // 2. Ubah jawaban jadi JSON
+                .then(data => {
+                    // 3. Tampilkan pesan ke dalam kotak HTML
+                    const box = document.getElementById('result');
+                    box.style.display = 'block';
+                    box.innerText = data.message;
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
