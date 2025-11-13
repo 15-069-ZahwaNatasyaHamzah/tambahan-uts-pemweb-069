@@ -126,3 +126,7 @@ def test_hello_name_view(testapp):
 9. Chameleon memproses template, mengganti ${name} dengan "Bob"
 10. Renderer menghasilkan string HTML yang lengkap
 11. Pyramid mengambil HTML yang sudah jadi itu, membungkusnya dalam objek Response (dengan Content-Type: text/html), dan mengirimkannya ke browser.
+
+## Screenshoot Hasil
+
+![Gambar WhatsApp 2025-11-13 pukul 08 48 31_965195f4](https://github.com/user-attachments/assets/d0b64ee4-6c66-487d-8197-1e4cc6133390)
