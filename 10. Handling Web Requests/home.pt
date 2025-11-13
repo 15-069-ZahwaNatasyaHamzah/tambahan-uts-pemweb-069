@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Request & Response</title>
+</head>
+<body>
+    <h1>Handling Web Requests</h1>
+    <p>Alamat URL kamu saat ini adalah: <b>${url}</b></p>
+    <hr>
+    <ul>
+        <li><a href="/plain">Coba Halaman Plain Text</a></li>
+        <li><a href="/json">Coba Halaman JSON</a></li>
+    </ul>
+</body>
+</html>
