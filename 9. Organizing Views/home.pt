@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tutorial View Classes</title>
+</head>
+<body>
+    <h1>Organizing Views</h1>
+    <p>Halo, ini adalah: <b>${name}</b></p>
+    <p>Halaman ini dirender menggunakan <i>Class-Based View</i>.</p>
+</body>
+</html>
