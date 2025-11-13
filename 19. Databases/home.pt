@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Database Tutorial</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .page-box { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; background: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <h1>Daftar Halaman Wiki (Database)</h1>
+    
+    <p><a href="/add" style="background: green; color: white; padding: 10px; text-decoration: none;">+ Tambah Data Otomatis</a></p>
+    <hr>
+
+    <div tal:repeat="page pages">
+        <div class="page-box">
+            <h3>ID: ${page.id} - ${page.title}</h3>
+            <p>${page.body}</p>
+        </div>
+    </div>
+
+    <p tal:condition="not pages">Belum ada data. Klik tombol tambah di atas!</p>
+</body>
+</html>
