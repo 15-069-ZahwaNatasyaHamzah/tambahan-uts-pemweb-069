@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tutorial Session</title>
+</head>
+<body>
+    <h1>Fitur Ingatan (Session)</h1>
+    <p>Halaman ini sudah kamu buka sebanyak:</p>
+    
+    <h2 style="color: red; font-size: 50px;">${counter}</h2>
+    
+    <p>Coba <b>Refresh (F5)</b> browser kamu berkali-kali!</p>
+    <p>Angkanya tidak akan kembali ke 1, karena server "mengingat" kamu.</p>
+</body>
+</html>
