@@ -72,3 +72,7 @@ def test_hello_view(testapp): # Minta 'testapp' fixture
 7. test_hello_view(testapp) sekarang berjalan dengan testapp yang sudah siap pakai.
 8. Fungsi tes test_default_view juga berjalan (ia tidak meminta fixture, jadi ia dieksekusi seperti biasa).
 9. pytest melaporkan hasil "PASSED" untuk kedua tes.
+
+## Screenshoot Hasil
+
+![Gambar WhatsApp 2025-11-13 pukul 08 24 38_8259bc8b](https://github.com/user-attachments/assets/4099e7b9-10ad-42dc-a1b4-007f0046c8d4)
