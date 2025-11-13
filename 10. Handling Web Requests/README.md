@@ -36,5 +36,3 @@ Menggunakan `config.scan()` untuk secara otomatis mendeteksi dan menghubungkan r
 ![Gambar WhatsApp 2025-11-13 pukul 09 17 52_f3d52068](https://github.com/user-attachments/assets/14f19ed2-6639-40fd-a0fe-630d64e82ce9)
 
 ![Gambar WhatsApp 2025-11-13 pukul 09 18 13_331ab0d0](https://github.com/user-attachments/assets/808d504f-19a0-43ad-892b-e312fbda015a)
-
-![Gambar WhatsApp 2025-11-13 pukul 13 51 38_6443b8cf](https://github.com/user-attachments/assets/55e72dfe-d9f3-4ba8-9443-7e3d57679aaa)
